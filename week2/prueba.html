@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sum</h1>
+    <input id="num1" type="text">
+    <input id="num2" type="text">
+    <button id="button" onclick="result()">+</button>
+    <div id="output"></div>
+    <script>
+        
+        function result() {
+            const num1 = document.getElementById(num1).value ;
+            const num2 = document.getElementById(num2).value ;
+            const outelement = document.getElementById("output");
+            const result = num1 + num2;
+            outelement.innerHTML = "total"+ result;
+        }
+    </script>
+</body>
+</html>
