@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WDD 330</title>
+    <link rel="stylesheet" href="../CSS/stylesheet.css" />
+    <script src="../js/main.js">console.log(document.forms);
+        const form = document.forms['search'];
+        // const [input,button] = form.elements;
+        const input = form.elements.searchInput;
+        input.addEventListener('focus', () => alert('focused'), false);</script>
+</head>
+
+<body>
+    <h1><a href="../index.html">WDD 330 - Web Frontend Development</a></h1>
+    <h2>Week04</h2>
+    <h3>Notes</h3>
+    <h4>Chapter 8 (Forms)</h4>
+
+
+    <h3>Chapter 12 - Object-Oriented Programming in JavaScript</h3>
+    <li>There are Constructor functions. They look like this:</li>
+    <p>const Dice = function(sides=6){<br> this.sides = sides;<br> this.roll = function() {<br> return
+        Math.floor(this.sides * Math.random() + 1)<br> }
+        <br> }
+    </p>
+    <li>What's important to note is the "this" keyword. It is used to represent the object that will be returned by the
+        constructor function.</li>
+    <li>An "instance" of the above code looks like this using the "new" operator:</li>
+    <p>const redDice = new Dice();</p>
+    <li>So they assigned that whole object to a new variable called redDice. </li>
+    <h4>Class Declarations</h4>
+    <li>Constructor functions are good, but class declarations are better. Here's code that is better than above:</li>
+    <p>class Dice {<br> constructor(sides=6) {<br> this.sides = sides;<br> }
+        <br> roll() {<br> return Math.floor(this.sides * Math.random() + 1)<br> }
+        <br>
+    
+    <h4>A golden rule to remember is:Never use arrays or objects as a default value in prototype.</h4>
+    <li>I'm not sure what this means. I'd like to see an example of using arrays or objects as the default value.</li>
+    <h4>Inheritance</h4>
+    <li>Extends is a way to inherit all the parent class qualities. The book gave the example of creating a ninja
+        turtles class using the extension of turtles as the parent class.</li>
+    <li>Inside the constructor, if you are going to use the same variable name to assign it to a new inherited class,
+        you use the keyword "super."</li>
+    <h4>Property Descriptors</h4>
+    
+    <li>So when you are setting attributes inside this method, you can use the "writeable" keyword and set it to false.
+        Then you can't change the value of it. It's a security measure.</li>
+    <li>Here's an example: Object.defineProperty(me, 'eyeColor', { value: 'blue', writable: false, enumerable: true });
+        results { name: 'DAZ' , age: 21, eyeColor: 'blue' }</li>
+    <li>So in the example above, we are setting or "definingProperty" of eyeColor to the value of blue, it can't be
+        overwritten because writable is set to false, and it can be numbered or counted because enumerable is set to
+        true.</li>
+    <li>enumerable ― this boolean value shows whether a property will show up when the object is displayed in a for in
+        loop, and is false by default</li>
+    <li>configurable ― this boolean value shows whether you can delete a property or change any of its attributes, and
+        is false by default.</li>
+    <li>getOwnPropertyDesciptor() method - get's the values in a object function.</li>
+    <li>Obejct.defineProperty() method - allows each attribute to be set.</li>
+
+
+    <h4>Mixin Function</h4>
+    
+    <li>Mixin functions can use the copy() function to create a deep copy.</li>
+    <li>If a method returns "this", methods can be chained together. </li>
+    <li>Sometimes, this gets tricky because "this" can refer to a global object.</li>
+    <li>mixin() is a function where you can make deep copies of objects, arrays. Instead of just referencing another
+        object, making a deep copy can be useful.</li>
+    <li>You can use mixins to add multiple properties at once.</li>
+    <li>mixin(wonderWoman,{ name: 'Wonder Woman', realName: 'Diana Prince' });</li>
+
+    <li>The value of this is not retained inside nested functions, which can cause errors. This can be worked around by
+        using that = this , using the bind(this) method and using arrow functions.</li>
+    <h4><a href="/frontend-330/week4/team.html">Team Activity</a></h4>
+</body>
+
+</html>
