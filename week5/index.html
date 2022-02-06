@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>WWD 330</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../CSS/stylesheet.css" />
+</head>
+
+<body>
+
+    <h1><a href="../index.html">Week05</a></h1>
+
+    <h3>Notes</h3>
+    <h4>Strict Mode</h4>
+    <li>Throws errors for sloppy code</li>
+    <li> type "'use strict';" in the top of the JavaScript file. </li>
+    <h4> find errors</h4>
+    <li>console.log() gives you information in the console</li>
+    <li>alert() gives you an alert box</li>
+    <li>Setting breakpoints in the console can help you step through the code to find errors</li>
+    <h4>Error Objects</h4>
+    <li>Create a new error constructor function like this: const error = new Error();</li>
+    <li>const error = new Error('Oops, something went wrong');</li>
+    <li>RangeError is thrown when a number is outside an allowable range of values.</li>
+    <li>ReferenceError is thrown when a reference is made to an item that doesn’t exist. For example, calling a function
+        that hasn't been defined.</li>
+    <li>SyntaxError is thrown when there’s an error in the code’s syntax.</li>
+    <li>TypeError is thrown when there’s an error in the type of value used; for example, a string is used when a number
+        is expected.</li>
+    <li>URIError is thrown when there’s a problem encoding or decoding the URI.</li>
+    <li>InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine. A common
+        cause of this too much recursion.</li>
+    <li>You can use these error objects to create new constructors for custom error objects like this:<br>
+        const error = new TypeError('You need to use numbers in this function');</li>
+    <h4>Throw Exception</h4>
+    <li>function squareRoot(number) {<br>
+        'use strict';<br>
+        if (number < 0) {<br>
+            throw new RangeError('You can't find the square root of negative numbers')<br>
+            }<br>
+            return Math.sqrt(number);<br>
+            };</li>
+   
+    <li>It says the output will be "7i" when I give it an input of -49, but that makes no sense</li>
+    <h4>Questions</h4>
+    <li>How do I use and install Jest?</li>
+    <li>examples on using Jest in this chapter. </li>
+
+    <h3><a href="team/hiking-complete.html">Team Activity</a></h3>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
