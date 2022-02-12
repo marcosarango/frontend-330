@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>To-Do List</title>
+    <!-- this fixes the wierd favicon error I keep getting. It adds a blank favicon. -->
+    <link href="data:," rel="icon">
+    <link rel="stylesheet" href="css/stylesheet.css" />
+</head>
+
+<body>
+    <div id="topDiv" class="header">
+        <form>
+            <h1>My To-Do List</h1>
+            <input type="text" id="myInput" placeholder="Add new to-do item here..." required>
+            <span onclick="window.myTodos.addTodo()" class="addBtn">Add</span>
+    </div>
+    <div>
+        <ul id="myUL">
+            <!-- Add a dummy task here to test it out -->
+            <!-- <input type="checkbox"><label>1st Item</label> -->
+        </ul>
+    </div>
+    </form>
+    <div id="footer">
+        <button class="buttons" onclick="window.myTodos.showAllTasks()">All</button>
+        <button class="buttons" onclick="window.myTodos.showActiveTodos()">Active</button>
+        <button class="buttons" onclick="window.myTodos.showCompletedTodos()">Completed</button>
+    </div>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
