@@ -64,7 +64,7 @@ ul li.checked::before {
 }
 
 .header {
-    background-color: teal;
+    background-color: rgb(128, 19, 0);
     margin-top: 20px;
     margin-left: 10%;
     padding: 30px 40px;
