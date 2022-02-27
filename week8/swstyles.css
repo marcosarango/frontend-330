@@ -1,0 +1,64 @@
+body {
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1 {
+    background-color: #1d3557;
+    color: white;
+    padding: 1em;
+}
+
+a:link,
+a:visited {
+    background-color: #1d3557;
+    color: white;
+    font-size: xx-large;
+}
+
+#prev {
+    font-size: large;
+    padding: 10px 30px 10px 30px;
+    margin-right: 10px;
+}
+
+#next {
+    font-size: large;
+    padding: 10px 30px 10px 30px;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+td {
+    cursor: pointer;
+    border: 1px solid;
+    padding: 0.5em;
+}
+
+th {
+    background-color: lightgray;
+    margin-bottom: 30px;
+    padding: 10px 25px 10px 25px;
+    font-size: large;
+}
+
+#backtonotes {
+    position: fixed;
+    bottom: 10px;
+    font-size: medium;
+    background-color: white;
+    color: #1d3557;
+}
+
+#nextandprevbuttons {
+    margin-top: 30px;
+}
