@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WDD 330</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- http://localhost//WDD330/VSCodeTest/WDD330/week9/index.html -->
+</head>
+
+<body>
+    <h1><a href="../index.html">Week9</a></h1>
+    <h3>Notes</h3>
+    <h4> Novice to Ninja</h4>
+    <li>window.navigator.userAgent tells info about the user's browser, but this may not always be accurate because it
+        can be changed manually by the user.</li>
+    <li>window.location.href, window.location.protocol, window.location.host, window.location.port,
+        window.location.pathname, window.location.search, window.location.hash, window.location.origin,
+        window.location.assign('https://www.sitepoint.com/'), window.location.toString()
+        are all referenced in this chapter. I'm listing them here as a reference point if I need them to go back and
+        look them up. </li>
+    <li>The Browser History - window.history.go(1); // goes forward 1 page</li>
+    <li>A new window can be opened using the window.open() method. This takes the URL of the page to be opened as its
+        first parameter, the window title as its second parameter, and a list of attributes as the third parameter.
+    </li>
+    <li>popup.close(), window.moveTo(0,0); // will move the window to the top-left corner of the screen,
+        window.resizeTo(600,400);</li>
+    <li>More Properties: window.screen.height, window.screen.width, window.screen.availWidth, window.screen.availHeight,
+        window.screen.colorDepth;</li>
+    <h4>Cookies</h4>
+    <li>document.cookie = 'name=Superman';</li>
+    <li>You can set the cookie to expire later than when a user closes the browser, say one day.</li>
+    <li>Example: document.cookie = 'name=Batman; max-age=86400' // 86400 secs = 1 day</li>
+    <li>Adding the string ; secure to the end of a cookie will ensure it’s only transmitted over a secure HTTPS network.
+    </li>
+    <li>To delete a cookie, you need to set it to expire at a time in the past: document.cookie = 'name=Batman;
+        expires=Thu, 01 Jan 1970 00:00:01 GMT';</li>
+    <h4>Timing Functions</h4>
+     <li>The window.setTimeout() method accepts a callback to a function as its first parameter and a number of
+        milliseconds as its second parameter. </li>
+    <li>clearInterval() and clearTimeout() will help clear out the things you don't need anymore.</li>
+    <li>setTimeOut() and setInterval() can help create animations. Let's see if I can make one below this list item.
+    </li>
+
+    <h4>Factorizor</h4>
+    <button id='rainbow'>Change Color</button>
+    <form>
+        <label for='number'>Enter a Number to Factorize:</label>
+        <input id='number' type='number' name='number' min=1 value='20'>
+        <button type='submit'>Submit</button>
+    </form>
+    <div id='output'></div>
+
+    <p>Couldn't really get this message thing to work, so this would be a question I have, is how to get it working.</p>
+    <form>
+        <label for='message'>Enter a Message:</label>
+        <input type='text' name='message'>
+        <button type='submit'>Submit</button>
+    </form>
+    <div id='websocketoutput'></div>
+
+    <h4>Multimedia</h4>
+    <li>You used to not be able to display video and audio without Adobe Flash. Now they have a video tag and an audio
+        tag.</li>
+    <audio src='/song.mp3' controls>
+            Your browser does not support the audio element.
+        </audio>
+    <li>I don't actually have a song to the aduio file above, but just wanted to include the html to see what it would
+        do.</li>
+    <li>The audio or video element can be referenced by a variable using one of the DOM methods we saw in Chapter 6: const audio = document.getElementsByTagName('audio')[0];</li>
+    <li>The play() method will start the clip playing from its current position: video.play();</li>
+    <li>There are lots of properties to go with it: volume, muted, currentTime, playbackRate, loop, duration.</li>
+
+    <h1><a href="/frontend-330/week9/team/index-FINISHED.html">Team Activity </a></h1>
+    
+    <script src='main.js'></script>
+</body>
+
+</html>
