@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>WDD 330</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../CSS/stylesheet.css" />
+    <!-- blank favicon for now -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <!-- http://localhost//WDD330/VSCodeTest/WDD330/week10/index/index.html -->
+</head>
+
+<body>
+    <h1><a href="../index.html">Week 10</a></h1>
+
+    <li>Simple Fetch statement:<br>
+        fetch('http://example.com/movies.json')<br>
+        .then(response => response.json())<br>
+        .then(data => console.log(data));</li>
+    <li>The simplest use of fetch() takes one argument and returns a promise containing the response (a Response
+        object).</li>
+        <h3>Checking that a fetch was successful</h3>
+    <li>An accurate check for a successful fetch() would include checking that the promise resolved, then checking that
+        the Response.ok property has a value of true.</li>
+    <p>fetch('flowers.jpg')<br>
+        .then(response => {<br>
+        if (!response.ok) {<br>
+        throw new Error('Network response was not ok');<br>
+        }<br>
+        return response.blob();<br>
+        })<br>
+        .then(myBlob => {<br>
+        myImage.src = URL.createObjectURL(myBlob);<br>
+        })<br>
+        .catch(error => {<br>
+        console.error('There has been a problem with your fetch operation:', error);<br>
+        });</p>
+    <h3>Headers</h3>
+    <li>The Headers interface allows you to create your own headers object via the Headers() constructor.</li>
+    <li>A headers object is a simple multi-map of names to values.</li>
+    <li>You can combine a lot of this cool info, like Response objects "response.ok" and such, with headers and new
+        Blob's</li>
+    <h3>Client-side form validation</h3>
+    <li>There's built-in form validation and then there's your own custom JS.</li>
+    <li>Required, min and max length, type, and pattern are all attributes you can use to ensure valid form fields.</li>
+    <li>There's valid and invalid checks.</li>
+    <li>You can add CSS to an invalid input.</li>
+  
+    <!-- <h3 class="red">This page is just to play with fetching data from an API.</h3> -->
+    <!-- <ul id="pokeList"></ul> -->
+
+    <h3><a href="/frontend-330/week10/quakes.html">Team Activity - Quakes</a></h3>
+
+    <script src="index2.js"></script>
+</body>
+
+</html>
